@@ -103,7 +103,7 @@ const Experiences = () => {
     },
     dpwh: {
       title: 'DPWH Internship',
-      fullDescription: `During my internship at the Department of Public Works and Highways (DPWH), I developed a comprehensive equipment inventory management system that digitized and automated their tracking processes. The system streamlined equipment monitoring, reduced manual data entry errors, and provided real-time visibility into equipment status and allocation across projects.`,
+      fullDescription: `During my internship at the Department of Public Works and Highways (DPWH), I developed a digital inventory system to improve the tracking and management of ICT equipment across departments. Integrated CSV import and export capabilities to streamline bulk data processing and simplify report generation, reducing manual workload and improving data accuracy.`,
       stats: {
         efficiency: '40%',
         users: '50+',
@@ -322,7 +322,8 @@ const Experiences = () => {
                         <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">💻 Full Stack Developer</span>
                         <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">PHP • MySQL • JavaScript</span>
                       </div>
-                      <p className="text-xs text-amber-600 mt-1">I developed a comprehensive equipment inventory management system that digitized tracking processes, reduced manual errors, and provided real-time visibility for 500+ equipment items</p>
+                      <p className="text-xs text-amber-600 mt-1">*Disclaimer: All data in the screenshots are Mockup data / Fake data*</p>
+                      <p className="text-xs text-amber-600 mt-1">I developed a digital inventory system to improve the tracking and management of ICT equipment across departments. Integrated CSV import and export capabilities to streamline bulk data processing and simplify report generation, reducing manual workload and improving data accuracy.</p>
                     </div>
                   )}
 
