@@ -1,5 +1,22 @@
 import React, { useState } from 'react';
 
+// Import all local images
+import biosortJpeg from '../images/capstone/biosort.JPEG';
+import biosortDashboard from '../images/capstone/biosort-dashboard.png';
+import biosortFinetune from '../images/capstone/biosort-finetune.png';
+import design2 from '../images/designs/2.jpg';
+import design6 from '../images/designs/6.jpg';
+import design10 from '../images/designs/10.jpg';
+import design17 from '../images/designs/17.jpg';
+import design36 from '../images/designs/36.jpg';
+
+// Import DPWH internship images
+import dpwhLogin from '../images/dpwh/login.png';
+import dpwhDashboard from '../images/dpwh/dashboard.png';
+import dpwhEquipment from '../images/dpwh/equipment.png';
+import dpwhAddEquip from '../images/dpwh/addequip.png';
+import dpwhImportEquip from '../images/dpwh/importequip.png';
+
 const Experiences = () => {
   const [activeExperience, setActiveExperience] = useState('dpwh');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -13,19 +30,19 @@ const Experiences = () => {
       images: [
         {
           id: 1,
-          url: '/images/capstone/biosort.jpeg',
+          url: biosortJpeg,
           caption: 'BioSort - Automated Waste Sorting Bin',
           description: 'I developed the core computer vision system for BioSort using Roboflow for object detection. I integrated their API into our website to identify biodegradable materials in real-time and trigger the sorting mechanism.'
         },
         {
           id: 2,
-          url: '/images/capstone/biosort-dashboard.png',
+          url: biosortDashboard,
           caption: 'BioSort Monitoring Dashboard',
           description: 'I created the dashboard that displays real-time data from the Roboflow API, including what the camera sees, waste detection results with confidence scores, sorting status, and biogas conversion metrics. I built this using React to provide an intuitive interface for monitoring system performance.'
         },
         {
           id: 3,
-          url: '/images/capstone/biosort-finetune.png',
+          url: biosortFinetune,
           caption: 'BioSort Fine-Tuning Interface',
           description: 'I designed and built the fine-tuning page where users can upload new images to improve the Roboflow model. The interface sends data to Roboflow\'s API to retrain the model, allowing the object detection system to continuously learn and become more accurate at identifying different types of waste.'
         }
@@ -44,7 +61,7 @@ const Experiences = () => {
       images: [
         {
           id: 1,
-          url: '/images/designs/2.jpg',
+          url: design2,
           caption: 'Promotional Campaign Design',
           category: 'Social Media',
           description: 'I designed eye-catching promotional graphics that highlighted seasonal offers and special promotions, driving customer engagement and foot traffic to the cafe.',
@@ -52,7 +69,7 @@ const Experiences = () => {
         },
         {
           id: 2,
-          url: '/images/designs/6.jpg',
+          url: design6,
           caption: 'Menu Update Announcement',
           category: 'Menu Design',
           description: 'I created visually appealing menu announcement posts whenever new drinks or food items were introduced, ensuring customers were always informed about the latest offerings.',
@@ -60,7 +77,7 @@ const Experiences = () => {
         },
         {
           id: 3,
-          url: '/images/designs/10.jpg',
+          url: design10,
           caption: 'Store Update & Announcement',
           category: 'Social Media',
           description: 'I designed graphics for important store updates including holiday hours, special events, and operational announcements, maintaining clear communication with customers.',
@@ -68,7 +85,7 @@ const Experiences = () => {
         },
         {
           id: 4,
-          url: '/images/designs/17.jpg',
+          url: design17,
           caption: 'Featured Product Showcase',
           category: 'Social Media',
           description: 'I created standout product showcase posts that highlighted Boris Cafe\'s best-selling drinks and food items, using appetizing visuals to attract customers.',
@@ -76,7 +93,7 @@ const Experiences = () => {
         },
         {
           id: 5,
-          url: '/images/designs/36.jpg',
+          url: design36,
           caption: 'Brand Consistency Series',
           category: 'Social Media',
           description: 'I developed a consistent visual identity across all posts, ensuring that every graphic aligned with Boris Cafe\'s brand aesthetic while maintaining freshness and variety in the feed.',
@@ -86,24 +103,53 @@ const Experiences = () => {
     },
     dpwh: {
       title: 'DPWH Internship',
+      fullDescription: `During my internship at the Department of Public Works and Highways (DPWH), I developed a comprehensive equipment inventory management system that digitized and automated their tracking processes. The system streamlined equipment monitoring, reduced manual data entry errors, and provided real-time visibility into equipment status and allocation across projects.`,
+      stats: {
+        efficiency: '40%',
+        users: '50+',
+        equipment: '500+',
+        features: '5+'
+      },
       images: [
         {
           id: 1,
-          url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-          caption: 'Document Management System',
-          description: 'I developed a digital document tracking system that automated workflow processes, reducing document processing time by 40% through automated routing and notifications.'
+          url: dpwhLogin,
+          caption: 'Secure Authentication System',
+          description: 'I implemented a role-based authentication system with secure login and session management, ensuring that only authorized personnel can access sensitive equipment data. This added a critical layer of security to protect government assets.',
+          category: 'Security',
+          date: '2024'
         },
         {
           id: 2,
-          url: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-          caption: 'Project Planning Dashboard',
-          description: 'I built an interactive dashboard for project planning that visualized Gantt charts and tracked resource allocation, helping project managers monitor progress in real-time.'
+          url: dpwhDashboard,
+          caption: 'Analytics Dashboard',
+          description: 'I built an interactive dashboard that provides real-time visibility into equipment inventory, status distribution, and usage patterns. This allows managers to make data-driven decisions about equipment allocation and maintenance scheduling.',
+          category: 'Analytics',
+          date: '2024'
         },
         {
           id: 3,
-          url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-          caption: 'Team Collaboration Platform',
-          description: 'I implemented a team collaboration feature with task assignment and progress monitoring, making it easier for teams to coordinate on projects.'
+          url: dpwhEquipment,
+          caption: 'Equipment Management Interface',
+          description: 'I designed and developed a comprehensive equipment listing interface with advanced filtering, search, and sorting capabilities. Users can quickly locate specific equipment, view detailed information, and track assignment history—reducing search time by over 60%.',
+          category: 'Management',
+          date: '2024'
+        },
+        {
+          id: 4,
+          url: dpwhAddEquip,
+          caption: 'Streamlined Equipment Addition',
+          description: 'I created an intuitive form interface for adding new equipment with validation and error handling. The system automatically generates property numbers and ensures data consistency, eliminating manual entry errors and saving approximately 15 minutes per equipment entry.',
+          category: 'Workflow',
+          date: '2024'
+        },
+        {
+          id: 5,
+          url: dpwhImportEquip,
+          caption: 'Bulk Import Functionality',
+          description: 'I implemented a powerful CSV import feature that allows administrators to upload hundreds of equipment records in seconds. The system validates data, handles errors gracefully, and provides clear feedback—transforming what used to be a days-long process into a 5-minute task.',
+          category: 'Automation',
+          date: '2024'
         }
       ]
     }
@@ -185,7 +231,14 @@ const Experiences = () => {
                               </span>
                             </span>
                           )}
-                          {exp === 'dpwh' && 'DPWH Internship'}
+                          {exp === 'dpwh' && (
+                            <span className="flex items-center gap-1">
+                              DPWH Internship
+                              <span className="text-xs bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded-full ml-1">
+                                Dev
+                              </span>
+                            </span>
+                          )}
                         </span>
                       </button>
                     ))}
@@ -238,7 +291,7 @@ const Experiences = () => {
                     )}
                   </div>
 
-                  {/* Enhanced Role/Context for Boris Cafe with new description */}
+                  {/* Enhanced Role/Context for Boris Cafe */}
                   {activeExperience === 'boris' && (
                     <div className="mb-4 p-4 bg-amber-50 rounded-lg border border-amber-200/50">
                       <div className="flex items-center gap-2 mb-2">
@@ -259,6 +312,17 @@ const Experiences = () => {
                         <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">Roboflow • React</span>
                       </div>
                       <p className="text-xs text-amber-600 mt-1">I integrated Roboflow's object detection API into our website for BioSort, an automated waste sorting bin that converts biodegradable materials into biogas</p>
+                    </div>
+                  )}
+
+                  {/* DPWH context */}
+                  {activeExperience === 'dpwh' && (
+                    <div className="mb-4 p-3 bg-amber-50 rounded-lg border border-amber-200/50">
+                      <div className="flex items-center gap-2 text-sm text-amber-800 mb-1">
+                        <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">💻 Full Stack Developer</span>
+                        <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">PHP • MySQL • JavaScript</span>
+                      </div>
+                      <p className="text-xs text-amber-600 mt-1">I developed a comprehensive equipment inventory management system that digitized tracking processes, reduced manual errors, and provided real-time visibility for 500+ equipment items</p>
                     </div>
                   )}
 
@@ -303,10 +367,14 @@ const Experiences = () => {
                           </p>
                         </div>
 
-                        {/* Category badge for Boris Cafe */}
-                        {activeExperience === 'boris' && currentImage.category && (
+                        {/* Category badge for Boris Cafe and DPWH */}
+                        {(activeExperience === 'boris' || activeExperience === 'dpwh') && currentImage.category && (
                           <div className="absolute top-2 left-2">
-                            <span className="text-xs bg-white/90 text-amber-800 px-2 py-1 rounded-full">
+                            <span className={`text-xs ${
+                              activeExperience === 'dpwh' 
+                                ? 'bg-blue-600/90 text-white' 
+                                : 'bg-white/90 text-amber-800'
+                            } px-2 py-1 rounded-full`}>
                               {currentImage.category}
                             </span>
                           </div>
@@ -357,6 +425,18 @@ const Experiences = () => {
                             <div className="mt-2 flex items-center gap-2">
                               <span className="text-xs bg-amber-200 text-amber-700 px-2 py-0.5 rounded">
                                 ✦ Made with Canva
+                              </span>
+                              {currentImage.date && (
+                                <span className="text-xs text-amber-500">📅 {currentImage.date}</span>
+                              )}
+                            </div>
+                          )}
+
+                          {/* Tech stack for DPWH */}
+                          {activeExperience === 'dpwh' && (
+                            <div className="mt-2 flex items-center gap-2">
+                              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
+                                💻 PHP • MySQL • JavaScript
                               </span>
                               {currentImage.date && (
                                 <span className="text-xs text-amber-500">📅 {currentImage.date}</span>

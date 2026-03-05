@@ -1,5 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+// Import all certificate images (1-20)
+import cert1 from '../images/certificates/1.jpg';
+import cert2 from '../images/certificates/2.jpg';
+import cert3 from '../images/certificates/3.jpg';
+import cert4 from '../images/certificates/4.jpg';
+import cert5 from '../images/certificates/5.jpg';
+import cert6 from '../images/certificates/6.jpg';
+import cert7 from '../images/certificates/7.jpg';
+import cert8 from '../images/certificates/8.jpg';
+import cert9 from '../images/certificates/9.jpg';
+import cert10 from '../images/certificates/10.jpg';
+import cert11 from '../images/certificates/11.jpg';
+import cert12 from '../images/certificates/12.png';
+import cert13 from '../images/certificates/13.jpg';
+import cert14 from '../images/certificates/14.jpg';
+import cert15 from '../images/certificates/15.jpg';
+import cert16 from '../images/certificates/16.jpg';
+import cert17 from '../images/certificates/17.jpg';
+import cert18 from '../images/certificates/18.jpg';
+import cert19 from '../images/certificates/19.jpg';
+import cert20 from '../images/certificates/20.jpg';
+
 const Certifications = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +38,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Attended a seminar focused on developing in-demand digital skills and adapting to emerging technologies for long-term career success.",
         shortDescription: "Digital skills & career readiness",
-        image: "/images/certificates/1.jpg",
+        image: cert1,
         credentialId: "CERT-01",
         color: "from-blue-500 to-blue-600"
       },
@@ -27,7 +49,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Completed foundational training in Linux systems, covering command-line usage, file management, and basic system administration.",
         shortDescription: "Linux fundamentals",
-        image: "/images/certificates/2.jpg",
+        image: cert2,
         credentialId: "CERT-02",
         color: "from-indigo-500 to-indigo-600"
       },
@@ -38,7 +60,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Learned how to set up and configure routers and switches, including initial device setup and basic network deployment.",
         shortDescription: "Router & switch configuration",
-        image: "/images/certificates/3.jpg",
+        image: cert3,
         credentialId: "CERT-03",
         color: "from-purple-500 to-purple-600"
       },
@@ -49,7 +71,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Gained knowledge in IP addressing, subnetting, and diagnosing common network connectivity issues.",
         shortDescription: "IP addressing & troubleshooting",
-        image: "/images/certificates/4.jpg",
+        image: cert4,
         credentialId: "CERT-04",
         color: "from-yellow-500 to-yellow-600"
       },
@@ -60,7 +82,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Demonstrated proficiency in using Cisco Packet Tracer for network simulation, configuration, and troubleshooting.",
         shortDescription: "Cisco Packet Tracer proficiency",
-        image: "/images/certificates/5.jpg",
+        image: cert5,
         credentialId: "CERT-05",
         color: "from-green-500 to-green-600"
       },
@@ -71,7 +93,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Explored core cybersecurity concepts including threats, vulnerabilities, risk management, and digital protection strategies.",
         shortDescription: "Cybersecurity fundamentals",
-        image: "/images/certificates/6.jpg",
+        image: cert6,
         credentialId: "CERT-06",
         color: "from-teal-500 to-teal-600"
       },
@@ -82,7 +104,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Enhanced SQL skills with advanced queries, joins, subqueries, and data manipulation techniques.",
         shortDescription: "Advanced SQL queries",
-        image: "/images/certificates/7.jpg",
+        image: cert7,
         credentialId: "CERT-07",
         color: "from-cyan-500 to-cyan-600"
       },
@@ -93,7 +115,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Participated in a discussion on balancing AI innovation with cybersecurity risks in modern software development.",
         shortDescription: "AI & cybersecurity in dev",
-        image: "/images/certificates/8.jpg",
+        image: cert8,
         credentialId: "CERT-08",
         color: "from-pink-500 to-pink-600"
       },
@@ -104,7 +126,7 @@ const Certifications = () => {
         date: "2022",
         fullDescription: "Completed participation in a STEM enrichment program designed to strengthen academic and technical foundations.",
         shortDescription: "STEM enrichment program",
-        image: "/images/certificates/9.jpg",
+        image: cert9,
         credentialId: "CERT-09",
         color: "from-orange-500 to-orange-600"
       },
@@ -115,7 +137,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Attended a career-focused seminar highlighting IT industry trends, cloud networking, and professional growth strategies.",
         shortDescription: "IT trends & cloud networking",
-        image: "/images/certificates/10.jpg",
+        image: cert10,
         credentialId: "CERT-10",
         color: "from-red-500 to-red-600"
       },
@@ -126,7 +148,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Learned practical development tools and Laravel framework fundamentals to bridge academic learning and industry readiness.",
         shortDescription: "Laravel & dev tools",
-        image: "/images/certificates/11.jpg",
+        image: cert11,
         credentialId: "CERT-11",
         color: "from-amber-500 to-amber-600"
       },
@@ -137,7 +159,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Participated in a technology seminar series featuring industry insights and emerging tech discussions.",
         shortDescription: "Industry & emerging tech insights",
-        image: "/images/certificates/12.png",
+        image: cert12,
         credentialId: "CERT-12",
         color: "from-lime-500 to-lime-600"
       },
@@ -148,7 +170,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Attended a seminar on maintaining work-life balance and applied creativity by designing logos using Adobe Illustrator.",
         shortDescription: "Design & wellness seminar",
-        image: "/images/certificates/13.jpg",
+        image: cert13,
         credentialId: "CERT-13",
         color: "from-emerald-500 to-emerald-600"
       },
@@ -159,7 +181,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Learned Java programming fundamentals including syntax, OOP principles, and basic application development.",
         shortDescription: "Java OOP fundamentals",
-        image: "/images/certificates/14.jpg",
+        image: cert14,
         credentialId: "CERT-14",
         color: "from-violet-500 to-violet-600"
       },
@@ -170,7 +192,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Studied foundational networking concepts such as protocols, network models, and basic infrastructure components.",
         shortDescription: "Network protocols & models",
-        image: "/images/certificates/15.jpg",
+        image: cert15,
         credentialId: "CERT-15",
         color: "from-fuchsia-500 to-fuchsia-600"
       },
@@ -181,7 +203,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Advanced Python training covering object-oriented programming, modules, and more complex problem-solving.",
         shortDescription: "Advanced Python & OOP",
-        image: "/images/certificates/16.jpg",
+        image: cert16,
         credentialId: "CERT-16",
         color: "from-rose-500 to-rose-600"
       },
@@ -192,7 +214,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Completed Cisco's foundational networking course covering network architecture, IP addressing, and basic configuration.",
         shortDescription: "CCNA network foundations",
-        image: "/images/certificates/17.jpg",
+        image: cert17,
         credentialId: "CERT-17",
         color: "from-sky-500 to-sky-600"
       },
@@ -203,7 +225,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Explored data analysis fundamentals, data visualization concepts, and the role of data in decision-making.",
         shortDescription: "Data analysis & visualization",
-        image: "/images/certificates/18.jpg",
+        image: cert18,
         credentialId: "CERT-18",
         color: "from-blue-500 to-blue-600"
       },
@@ -214,7 +236,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Built strong foundations in Python programming including variables, loops, functions, and logic building.",
         shortDescription: "Python programming basics",
-        image: "/images/certificates/19.jpg",
+        image: cert19,
         credentialId: "CERT-19",
         color: "from-indigo-500 to-indigo-600"
       },
@@ -225,7 +247,7 @@ const Certifications = () => {
         date: "2024",
         fullDescription: "Learned the basics of database management, SQL queries, and data retrieval techniques.",
         shortDescription: "SQL & database basics",
-        image: "/images/certificates/20.jpg",
+        image: cert20,
         credentialId: "CERT-20",
         color: "from-purple-500 to-purple-600"
       }

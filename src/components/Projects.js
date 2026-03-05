@@ -1,5 +1,78 @@
 import React, { useState } from 'react';
 
+// Import all design images (1-54)
+import design1 from '../images/designs/1.jpg';
+import design2 from '../images/designs/2.jpg';
+import design3 from '../images/designs/3.jpg';
+import design4 from '../images/designs/4.jpg';
+import design5 from '../images/designs/5.jpg';
+import design6 from '../images/designs/6.jpg';
+import design7 from '../images/designs/7.jpg';
+import design8 from '../images/designs/8.jpg';
+import design9 from '../images/designs/9.jpg';
+import design10 from '../images/designs/10.jpg';
+import design11 from '../images/designs/11.jpg';
+import design12 from '../images/designs/12.jpg';
+import design13 from '../images/designs/13.jpg';
+import design14 from '../images/designs/14.jpg';
+import design15 from '../images/designs/15.jpg';
+import design16 from '../images/designs/16.jpg';
+import design17 from '../images/designs/17.jpg';
+import design18 from '../images/designs/18.jpg';
+import design19 from '../images/designs/19.jpg';
+import design20 from '../images/designs/20.jpg';
+import design21 from '../images/designs/21.jpg';
+import design22 from '../images/designs/22.jpg';
+import design23 from '../images/designs/23.jpg';
+import design24 from '../images/designs/24.jpg';
+import design25 from '../images/designs/25.jpg';
+import design26 from '../images/designs/26.jpg';
+import design27 from '../images/designs/27.jpg';
+import design28 from '../images/designs/28.jpg';
+import design29 from '../images/designs/29.jpg';
+import design30 from '../images/designs/30.jpg';
+import design31 from '../images/designs/31.jpg';
+import design32 from '../images/designs/32.jpg';
+import design33 from '../images/designs/33.jpg';
+import design34 from '../images/designs/34.jpg';
+import design35 from '../images/designs/35.jpg';
+import design36 from '../images/designs/36.jpg';
+import design37 from '../images/designs/37.jpg';
+import design38 from '../images/designs/38.jpg';
+import design39 from '../images/designs/39.jpg';
+import design40 from '../images/designs/40.jpg';
+import design41 from '../images/designs/41.jpg';
+import design42 from '../images/designs/42.jpg';
+import design43 from '../images/designs/43.jpg';
+import design44 from '../images/designs/44.jpg';
+import design45 from '../images/designs/45.jpg';
+import design46 from '../images/designs/46.jpg';
+import design47 from '../images/designs/47.jpg';
+import design48 from '../images/designs/48.jpg';
+import design49 from '../images/designs/49.jpg';
+import design50 from '../images/designs/50.jpg';
+import design51 from '../images/designs/51.jpg';
+import design52 from '../images/designs/52.jpg';
+import design53 from '../images/designs/53.jpg';
+import design54 from '../images/designs/54.jpg';
+
+// Create arrays of imported images
+const socialImages = [
+  design1, design2, design3, design4, design5, design6, design7, design8, design9, design10,
+  design11, design12, design13, design14, design15, design16, design17, design18, design19, design20,
+  design21, design22, design23, design24
+];
+
+const menuImages = [
+  design25, design26, design27, design28, design29, design30, design31, design32, design33, design34,
+  design35, design36, design37, design38, design39
+];
+
+const promoImages = [
+  design40, design41, design42, design43, design44, design45, design46, design47, design48, design49,
+  design50, design51, design52, design53, design54
+];
+
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
   const [filter, setFilter] = useState('all');
@@ -8,18 +81,14 @@ const Projects = () => {
   const [previewGallery, setPreviewGallery] = useState(null);
   const [galleryProject, setGalleryProject] = useState(null);
 
-  // Generate array of image objects from 1.jpg to 54.jpg
-  const generateBorisImages = (start, end, category, baseCaption) => {
-    const images = [];
-    for (let i = start; i <= end; i++) {
-      images.push({
-        url: `/images/designs/${i}.jpg`,
-        caption: `${baseCaption} ${i}`,
-        description: `Boris Cafe design ${i}`,
-        date: "2024"
-      });
-    }
-    return images;
+  // Generate array of image objects from imported images
+  const generateBorisImages = (imagesArray, startNum, category, baseCaption) => {
+    return imagesArray.map((img, index) => ({
+      url: img,
+      caption: `${baseCaption} ${startNum + index}`,
+      description: `Boris Cafe design ${startNum + index}`,
+      date: "2024"
+    }));
   };
 
   const projects = [
@@ -168,8 +237,8 @@ const Projects = () => {
       tools: ["Canva", "Instagram", "Facebook"],
       role: "Graphic Designer & Social Media Marketer",
       duration: "2024",
-      coverImage: "/images/designs/1.jpg",
-      images: generateBorisImages(1, 24, "social", "Social Media Post"),
+      coverImage: design1,
+      images: generateBorisImages(socialImages, 1, "social", "Social Media Post"),
       features: [
         "Consistent brand identity",
         "Engaging visual content",
@@ -195,8 +264,8 @@ const Projects = () => {
       tools: ["Canva"],
       role: "Graphic Designer",
       duration: "2024",
-      coverImage: "/images/designs/25.jpg",
-      images: generateBorisImages(25, 39, "menu", "Menu Design"),
+      coverImage: design25,
+      images: generateBorisImages(menuImages, 25, "menu", "Menu Design"),
       features: [
         "Clear visual hierarchy",
         "Appetizing food photography",
@@ -222,8 +291,8 @@ const Projects = () => {
       tools: ["Canva"],
       role: "Graphic Designer",
       duration: "2024",
-      coverImage: "/images/designs/40.jpg",
-      images: generateBorisImages(40, 54, "promo", "Promotional Design"),
+      coverImage: design40,
+      images: generateBorisImages(promoImages, 40, "promo", "Promotional Design"),
       features: [
         "Seasonal themes",
         "Event announcements",
