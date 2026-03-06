@@ -23,7 +23,7 @@ const About = () => {
                   The Basics
                 </h3>
                 <p className="text-amber-900/80 leading-relaxed">
-                  Hi there, I'm <span className="font-semibold">Rylee Miguel N. Pamintuan</span>! I'm an aspiring web and app developer. Whether I'm writing code or solving problems, I'm deeply passionate about using my craft to make digital business ideas come to life.
+                  Hi there, I'm <span className="font-semibold">Rylee Miguel</span>! I'm an aspiring web and app developer. Whether I'm writing code or solving problems, I'm deeply passionate about using my craft to make digital business ideas come to life.
                 </p>
               </div>
 
@@ -48,7 +48,7 @@ const About = () => {
                   Personal Life
                 </h3>
                 <p className="text-amber-900/80 leading-relaxed">
-                  When I'm not developing or staring at lines of code, I love going out to discover new coffee shops and taking nature trips to visit mesmerizing places. I also enjoy unwinding with a good gaming session in my free time—I'm a big fan of MOBA games, especially <span className="font-medium text-amber-800">League of Legends: Wild Rift</span>.
+                  When I'm not developing or staring at lines of code, I love going out to discover new coffee shops and taking nature trips using my motorcycle to visit mesmerizing places.
                 </p>
               </div>
 
