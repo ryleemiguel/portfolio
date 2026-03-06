@@ -65,7 +65,7 @@ const Experiences = () => {
           caption: 'Promotional Campaign Design',
           category: 'Social Media',
           description: 'I designed eye-catching promotional graphics that highlighted seasonal offers and special promotions, driving customer engagement and foot traffic to the cafe.',
-          date: '2024'
+          date: '2025'
         },
         {
           id: 2,
@@ -73,7 +73,7 @@ const Experiences = () => {
           caption: 'Menu Update Announcement',
           category: 'Menu Design',
           description: 'I created visually appealing menu announcement posts whenever new drinks or food items were introduced, ensuring customers were always informed about the latest offerings.',
-          date: '2024'
+          date: '2025'
         },
         {
           id: 3,
@@ -81,7 +81,7 @@ const Experiences = () => {
           caption: 'Store Update & Announcement',
           category: 'Social Media',
           description: 'I designed graphics for important store updates including holiday hours, special events, and operational announcements, maintaining clear communication with customers.',
-          date: '2024'
+          date: '2025'
         },
         {
           id: 4,
@@ -89,7 +89,7 @@ const Experiences = () => {
           caption: 'Featured Product Showcase',
           category: 'Social Media',
           description: 'I created standout product showcase posts that highlighted Boris Cafe\'s best-selling drinks and food items, using appetizing visuals to attract customers.',
-          date: '2024'
+          date: '2025'
         },
         {
           id: 5,
@@ -97,13 +97,14 @@ const Experiences = () => {
           caption: 'Brand Consistency Series',
           category: 'Social Media',
           description: 'I developed a consistent visual identity across all posts, ensuring that every graphic aligned with Boris Cafe\'s brand aesthetic while maintaining freshness and variety in the feed.',
-          date: '2024'
+          date: '2025'
         }
       ]
     },
     dpwh: {
       title: 'DPWH Internship',
       fullDescription: `During my internship at the Department of Public Works and Highways (DPWH), I developed a digital inventory system to improve the tracking and management of ICT equipment across departments. Integrated CSV import and export capabilities to streamline bulk data processing and simplify report generation, reducing manual workload and improving data accuracy.`,
+      disclaimer: "All data shown in screenshots are mock-ups and for demonstration purposes only. No actual government data is displayed.",
       stats: {
         efficiency: '40%',
         users: '50+',
@@ -117,7 +118,7 @@ const Experiences = () => {
           caption: 'Secure Authentication System',
           description: 'I implemented a role-based authentication system with secure login and session management, ensuring that only authorized personnel can access sensitive equipment data. This added a critical layer of security to protect government assets.',
           category: 'Security',
-          date: '2024'
+          date: '2026'
         },
         {
           id: 2,
@@ -125,7 +126,7 @@ const Experiences = () => {
           caption: 'Analytics Dashboard',
           description: 'I built an interactive dashboard that provides real-time visibility into equipment inventory, status distribution, and usage patterns. This allows managers to make data-driven decisions about equipment allocation and maintenance scheduling.',
           category: 'Analytics',
-          date: '2024'
+          date: '2026'
         },
         {
           id: 3,
@@ -133,7 +134,7 @@ const Experiences = () => {
           caption: 'Equipment Management Interface',
           description: 'I designed and developed a comprehensive equipment listing interface with advanced filtering, search, and sorting capabilities. Users can quickly locate specific equipment, view detailed information, and track assignment history—reducing search time by over 60%.',
           category: 'Management',
-          date: '2024'
+          date: '2026'
         },
         {
           id: 4,
@@ -141,7 +142,7 @@ const Experiences = () => {
           caption: 'Streamlined Equipment Addition',
           description: 'I created an intuitive form interface for adding new equipment with validation and error handling. The system automatically generates property numbers and ensures data consistency, eliminating manual entry errors and saving approximately 15 minutes per equipment entry.',
           category: 'Workflow',
-          date: '2024'
+          date: '2026'
         },
         {
           id: 5,
@@ -149,7 +150,7 @@ const Experiences = () => {
           caption: 'Bulk Import Functionality',
           description: 'I implemented a powerful CSV import feature that allows administrators to upload hundreds of equipment records in seconds. The system validates data, handles errors gracefully, and provides clear feedback—transforming what used to be a days-long process into a 5-minute task.',
           category: 'Automation',
-          date: '2024'
+          date: '2026'
         }
       ]
     }
@@ -315,15 +316,22 @@ const Experiences = () => {
                     </div>
                   )}
 
-                  {/* DPWH context */}
+                  {/* DPWH context with disclaimer */}
                   {activeExperience === 'dpwh' && (
                     <div className="mb-4 p-3 bg-amber-50 rounded-lg border border-amber-200/50">
-                      <div className="flex items-center gap-2 text-sm text-amber-800 mb-1">
-                        <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">💻 Full Stack Developer</span>
-                        <span className="bg-amber-200 px-2 py-0.5 rounded-full text-xs">PHP • MySQL • JavaScript</span>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-amber-200 px-3 py-1 rounded-full text-xs font-medium text-amber-800">💻 Full Stack Developer</span>
+                        <span className="bg-amber-200 px-3 py-1 rounded-full text-xs font-medium text-amber-800">PHP • MySQL • JavaScript</span>
                       </div>
-                      <p className="text-xs text-amber-600 mt-1">*Disclaimer: All data in the screenshots are Mockup data / Fake data*</p>
-                      <p className="text-xs text-amber-600 mt-1">I developed a digital inventory system to improve the tracking and management of ICT equipment across departments. Integrated CSV import and export capabilities to streamline bulk data processing and simplify report generation, reducing manual workload and improving data accuracy.</p>
+                      
+                      {/* Disclaimer badge */}
+                      <div className="mb-2 inline-flex items-center gap-1 bg-amber-100 text-amber-600 text-xs px-2 py-1 rounded-full">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Demo Data
+                      </div>
+                      <p className="text-xs text-amber-600">I developed a digital inventory system to improve the tracking and management of ICT equipment across departments. Integrated CSV import and export capabilities to streamline bulk data processing and simplify report generation, reducing manual workload and improving data accuracy.</p>
                     </div>
                   )}
 
@@ -449,6 +457,18 @@ const Experiences = () => {
                           <div className="mt-2 h-px bg-gradient-to-r from-transparent via-amber-200/50 to-transparent"></div>
                         </div>
                       </div>
+
+                      {/* Disclaimer badge for DPWH images */}
+                      {activeExperience === 'dpwh' && (
+                        <div className="mt-2 text-center">
+                          <span className="text-xs bg-amber-100 text-amber-600 px-2 py-1 rounded-full inline-flex items-center gap-1">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Mockup Data Only
+                          </span>
+                        </div>
+                      )}
                     </>
                   )}
                 </div>
@@ -519,7 +539,7 @@ const Experiences = () => {
 
               {/* Gallery Footer */}
               <div className="mt-6 text-center text-sm text-amber-600 border-t border-amber-200/50 pt-4">
-                <p>📱 Instagram posts I designed for Boris Cafe using Canva (2024)</p>
+                <p>📱 Instagram posts I designed for Boris Cafe using Canva (2025)</p>
               </div>
             </div>
           </div>

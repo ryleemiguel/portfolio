@@ -56,6 +56,18 @@ import design52 from '../images/designs/52.jpg';
 import design53 from '../images/designs/53.jpg';
 import design54 from '../images/designs/54.jpg';
 
+// Import DPWH inventory system screenshots
+import dpwhLogin from '../images/dpwh/login.png';
+import dpwhDashboard from '../images/dpwh/dashboard.png';
+import dpwhEquipment from '../images/dpwh/equipment.png';
+import dpwhAddEquip from '../images/dpwh/addequip.png';
+import dpwhImportEquip from '../images/dpwh/importequip.png';
+
+// Import BioSort images
+import biosortJpeg from '../images/capstone/biosort.JPEG';
+import biosortDashboard from '../images/capstone/biosort-dashboard.png';
+import biosortFinetune from '../images/capstone/biosort-finetune.png';
+
 // Create arrays of imported images
 const socialImages = [
   design1, design2, design3, design4, design5, design6, design7, design8, design9, design10,
@@ -87,143 +99,78 @@ const Projects = () => {
       url: img,
       caption: `${baseCaption} ${startNum + index}`,
       description: `Boris Cafe design ${startNum + index}`,
-      date: "2024"
+      date: "2025"
     }));
   };
 
   const projects = [
-    // ========== WEB DEVELOPMENT PROJECTS ==========
+    // ========== WEB DEVELOPMENT / IOT PROJECTS ==========
     {
       id: 1,
-      title: "Boris Cafe POS System",
+      title: "BioSort - Automated Waste Sorting System",
       category: "web",
-      type: "Full Stack",
-      description: "A complete point of sale system with inventory management, sales tracking, and receipt generation.",
-      longDescription: "Built for a local cafe to streamline their operations. Features include real-time inventory updates, sales analytics dashboard, employee management, and customizable receipt printing.",
-      tech: ["React", "Node.js", "MySQL", "Tailwind CSS"],
-      role: "Lead Developer",
-      duration: "3 months",
-      image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      features: [
-        "Real-time inventory tracking",
-        "Sales analytics with charts",
-        "Receipt generation system",
-        "Employee login system",
-        "Daily sales reports"
-      ],
-      demo: "#",
-      github: "#",
-      highlights: ["First full-stack project", "Currently used by local business"]
-    },
-    {
-      id: 2,
-      title: "IoT Classroom Monitor",
-      category: "web",
-      type: "IoT",
-      description: "Computer vision system for attendance tracking and environmental monitoring.",
-      longDescription: "Capstone project using Raspberry Pi and camera modules to automate attendance and monitor classroom conditions.",
-      tech: ["Python", "OpenCV", "Raspberry Pi", "Flask"],
-      role: "Backend Developer",
+      type: "IoT • Computer Vision",
+      description: "An automated waste sorting bin that converts biodegradable materials into biogas using computer vision and IoT sensors.",
+      longDescription: "As Lead Programmer for BioSort, I developed the core computer vision system using Roboflow for object detection and integrated their API into our web application. The system identifies biodegradable materials in real-time and triggers the sorting mechanism. I also built a comprehensive monitoring dashboard using React that displays real-time data from the Roboflow API, including waste detection results with confidence scores, sorting status, and biogas conversion metrics. Additionally, I designed a fine-tuning interface that allows users to upload new images to improve the model, enabling continuous learning and increased accuracy.",
+      tech: ["Python", "Roboflow", "React", "OpenCV", "Raspberry Pi"],
+      role: "Lead Programmer",
       duration: "4 months",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      features: [
-        "Face recognition attendance",
-        "Temperature monitoring",
-        "Automated logging",
-        "Web dashboard",
-        "Alert system"
+      coverImage: biosortJpeg,
+      images: [
+        { url: biosortJpeg, caption: "BioSort - Automated Waste Sorting Bin", description: "The physical system with computer vision capabilities for waste identification and sorting." },
+        { url: biosortDashboard, caption: "Real-time Monitoring Dashboard", description: "React dashboard displaying waste detection results, confidence scores, and biogas conversion metrics from the Roboflow API." },
+        { url: biosortFinetune, caption: "Model Fine-tuning Interface", description: "Web interface that allows users to upload new images to retrain and improve the object detection model." }
       ],
-      demo: "#",
-      github: "#",
-      highlights: ["2nd place hackathon winner", "University capstone project"]
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      category: "web",
-      type: "Frontend",
-      description: "Real-time weather application with 5-day forecast and location search.",
-      longDescription: "A responsive weather app that uses OpenWeatherMap API to display current conditions and forecasts for any city.",
-      tech: ["React", "JavaScript", "CSS3", "API Integration"],
-      role: "Frontend Developer",
-      duration: "2 weeks",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       features: [
-        "City search",
-        "Current weather conditions",
-        "5-day forecast",
-        "Responsive design",
-        "Weather icons"
+        "Real-time object detection with Roboflow API",
+        "Automated waste sorting mechanism",
+        "Biogas conversion monitoring",
+        "Interactive analytics dashboard",
+        "Model fine-tuning capabilities",
+        "Continuous learning system"
       ],
-      demo: "#",
-      github: "#",
-      highlights: ["First API integration project", "Practiced React hooks"]
-    },
-    {
-      id: 4,
-      title: "Task Manager App",
-      category: "web",
-      type: "Full Stack",
-      description: "A full-stack task management application with user authentication.",
-      longDescription: "Users can create, edit, delete, and organize tasks with categories and due dates. Includes user accounts and data persistence.",
-      tech: ["PHP", "MySQL", "JavaScript", "Tailwind CSS"],
-      role: "Full Stack Developer",
-      duration: "1 month",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      features: [
-        "User registration/login",
-        "Create and manage tasks",
-        "Categories and priorities",
-        "Due date tracking",
-        "Search and filter"
+      results: [
+        "2nd place in regional hackathon",
+        "Successfully identifies 85% of waste types",
+        "Reduces manual sorting time by 70%",
+        "Featured as university capstone project"
       ],
-      demo: "#",
-      github: "#",
-      highlights: ["Practiced PHP/MySQL", "Implemented authentication"]
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      category: "web",
-      type: "Frontend",
-      description: "This wooden-themed portfolio you're viewing right now!",
-      longDescription: "A minimalist portfolio built with React and Tailwind CSS, featuring a warm wooden aesthetic and smooth interactions.",
-      tech: ["React", "Tailwind CSS", "JavaScript"],
-      role: "Designer & Developer",
-      duration: "2 weeks",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      features: [
-        "Wooden minimalist design",
-        "Smooth scrolling",
-        "Interactive carousel",
-        "Responsive layout",
-        "Modal dialogs"
-      ],
-      demo: "#",
-      github: "#",
-      highlights: ["Personal branding", "Practice with Tailwind"]
+      highlights: ["Hackathon Winner", "Capstone Project"]
     },
     {
       id: 6,
-      title: "DPWH Document System",
+      title: "DPWH Equipment Inventory System",
       category: "web",
       type: "Full Stack",
-      description: "Digital document tracking system for government office.",
-      longDescription: "Internship project that digitized document workflows, reducing processing time by 40%.",
+      description: "A comprehensive equipment inventory management system for the Department of Public Works and Highways.",
+      longDescription: "During my internship at DPWH, I developed a full-stack inventory management system that digitized their equipment tracking processes. The system features secure authentication, real-time dashboard analytics, equipment management, and bulk import capabilities—reducing manual data entry time by 80% and providing instant visibility into equipment status across projects.",
       tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-      role: "Intern Developer",
+      role: "Full Stack Developer",
       duration: "2 months",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      features: [
-        "Document tracking",
-        "Workflow automation",
-        "User roles",
-        "Search functionality",
-        "Report generation"
+      coverImage: dpwhDashboard,
+      images: [
+        { url: dpwhLogin, caption: "Secure Login System", description: "Role-based authentication with session management to ensure only authorized personnel can access sensitive equipment data." },
+        { url: dpwhDashboard, caption: "Analytics Dashboard", description: "Real-time dashboard showing equipment statistics, status distribution, and recent activities for data-driven decision making." },
+        { url: dpwhEquipment, caption: "Equipment Management", description: "Comprehensive equipment listing with search, filter, and sort capabilities—reducing search time by over 60%." },
+        { url: dpwhAddEquip, caption: "Add Equipment Form", description: "Intuitive form interface with validation that automatically generates property numbers and ensures data consistency." },
+        { url: dpwhImportEquip, caption: "Bulk Import Feature", description: "CSV import functionality that allows administrators to upload hundreds of equipment records in seconds instead of days." }
       ],
-      demo: "#",
-      github: "#",
-      highlights: ["Real-world government project", "40% efficiency improvement"]
+      features: [
+        "Role-based authentication",
+        "Interactive analytics dashboard",
+        "Equipment tracking with search/filter",
+        "Automated property number generation",
+        "Bulk CSV import/export",
+        "Activity logging"
+      ],
+      results: [
+        "40% reduction in processing time",
+        "500+ equipment items tracked",
+        "80% faster data entry",
+        "Used by 50+ personnel"
+      ],
+      disclaimer: "All data shown in screenshots are mock-ups and for demonstration purposes only. No actual government data is displayed.",
+      highlights: ["Real-world government deployment", "Digitized manual processes"]
     },
 
     // ========== BORIS CAFE DESIGN PROJECTS ==========
@@ -236,7 +183,7 @@ const Projects = () => {
       longDescription: "As Graphic Designer at Boris Cafe, I created a consistent visual identity across all social media platforms. This collection showcases 24 social media posts I designed to engage customers and promote products.",
       tools: ["Canva", "Instagram", "Facebook"],
       role: "Graphic Designer & Social Media Marketer",
-      duration: "2024",
+      duration: "2025",
       coverImage: design1,
       images: generateBorisImages(socialImages, 1, "social", "Social Media Post"),
       features: [
@@ -251,9 +198,7 @@ const Projects = () => {
         "40% increase in engagement",
         "24 posts created",
         "10k+ monthly reach"
-      ],
-      highlights: ["Canva designs", "Social media strategy"]
-    },
+      ]    },
     {
       id: 8,
       title: "Boris Cafe - Menu Designs",
@@ -263,7 +208,7 @@ const Projects = () => {
       longDescription: "Created a complete set of menu designs including main menu, seasonal specials, and drink collections. Each design focuses on visual hierarchy and appetizing presentation.",
       tools: ["Canva"],
       role: "Graphic Designer",
-      duration: "2024",
+      duration: "2025",
       coverImage: design25,
       images: generateBorisImages(menuImages, 25, "menu", "Menu Design"),
       features: [
@@ -278,8 +223,7 @@ const Projects = () => {
         "Used in cafe daily",
         "Positive customer feedback",
         "15 menu variations"
-      ],
-      highlights: ["Print and digital formats", "Seasonal collections"]
+      ]
     },
     {
       id: 9,
@@ -290,7 +234,7 @@ const Projects = () => {
       longDescription: "Designed promotional graphics for special events, holiday seasons, and marketing campaigns. These designs helped drive customer engagement and boost sales during key periods.",
       tools: ["Canva"],
       role: "Graphic Designer",
-      duration: "2024",
+      duration: "2025",
       coverImage: design40,
       images: generateBorisImages(promoImages, 40, "promo", "Promotional Design"),
       features: [
@@ -305,14 +249,13 @@ const Projects = () => {
         "30% sales boost during campaigns",
         "200+ loyalty signups",
         "15 promotional designs"
-      ],
-      highlights: ["Increased foot traffic", "Campaign success"]
+      ]
     }
   ];
 
   const filters = [
     { value: 'all', label: 'All Projects' },
-    { value: 'web', label: 'Web Development' },
+    { value: 'web', label: 'Web Development / IoT' },
     { value: 'design', label: 'Graphic Design' }
   ];
 
@@ -389,28 +332,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Stats summary for design category */}
-          {filter === 'design' && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-white p-4 rounded-lg border border-amber-200/70 text-center">
-                <div className="text-2xl font-serif text-amber-800">54</div>
-                <div className="text-xs text-amber-600">Total Designs</div>
-              </div>
-              <div className="bg-white p-4 rounded-lg border border-amber-200/70 text-center">
-                <div className="text-2xl font-serif text-amber-800">24</div>
-                <div className="text-xs text-amber-600">Social Posts</div>
-              </div>
-              <div className="bg-white p-4 rounded-lg border border-amber-200/70 text-center">
-                <div className="text-2xl font-serif text-amber-800">15</div>
-                <div className="text-xs text-amber-600">Menu Designs</div>
-              </div>
-              <div className="bg-white p-4 rounded-lg border border-amber-200/70 text-center">
-                <div className="text-2xl font-serif text-amber-800">15</div>
-                <div className="text-xs text-amber-600">Promotions</div>
-              </div>
-            </div>
-          )}
-
           {/* Projects grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
@@ -428,7 +349,7 @@ const Projects = () => {
                   }}
                 >
                   <img
-                    src={project.coverImage || project.image}
+                    src={project.coverImage}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -437,10 +358,8 @@ const Projects = () => {
                   <div className="absolute top-2 right-2 flex gap-1 z-10">
                     <span className={`text-xs px-2 py-1 rounded ${
                       project.category === 'web' 
-                        ? 'bg-blue-600/90 text-white' 
-                        : 'bg-purple-600/90 text-white'
+
                     }`}>
-                      {project.category === 'web' ? '💻 Web' : '🎨 Design'}
                     </span>
                     {project.images && (
                       <span className="bg-amber-800/90 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
@@ -456,7 +375,7 @@ const Projects = () => {
                   {project.images && (
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-20">
                       <span className="bg-white text-amber-800 text-sm px-3 py-1 rounded-full">
-                        Click to view {project.images.length} designs
+                        Click to view {project.images.length} {project.category === 'web' ? 'screenshots' : 'designs'}
                       </span>
                     </div>
                   )}
@@ -479,7 +398,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Preview thumbnails for design projects */}
+                  {/* Preview thumbnails for projects with images */}
                   {project.images && (
                     <div className="flex gap-1 mb-3">
                       {project.images.slice(0, 3).map((img, idx) => (
@@ -500,12 +419,23 @@ const Projects = () => {
                     </div>
                   )}
 
+                  {/* Disclaimer badge for DPWH project */}
+                  {project.disclaimer && (
+                    <div className="mb-2">
+                      <span className="text-xs bg-amber-100 text-amber-600 px-2 py-0.5 rounded-full inline-flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Demo Data
+                      </span>
+                    </div>
+                  )}
+
                   {/* Action buttons */}
                   <div className="flex items-center justify-between mt-4 pt-3 border-t border-amber-200/50">
                     <button
                       onClick={() => {
                         setActiveProject(project);
-                        // If it's a design project, also close any open galleries
                         if (project.images) {
                           setGalleryProject(null);
                         }
@@ -543,6 +473,13 @@ const Projects = () => {
               </div>
             ))}
           </div>
+
+          {/* Message if no projects in category */}
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-amber-600">No projects found in this category.</p>
+            </div>
+          )}
         </div>
       </div>
 
@@ -624,7 +561,7 @@ const Projects = () => {
             {/* Image caption */}
             <div className="absolute -bottom-12 left-0 right-0 text-center">
               <p className="text-white text-lg">{previewImage.caption}</p>
-              <p className="text-white/60 text-sm mt-1">Design {previewIndex + 1} of {previewGallery.length}</p>
+              <p className="text-white/60 text-sm mt-1">Image {previewIndex + 1} of {previewGallery.length}</p>
             </div>
 
             {/* Thumbnail strip */}
@@ -659,7 +596,7 @@ const Projects = () => {
             <div className="sticky top-0 bg-amber-900 text-white p-4 rounded-t-xl flex justify-between items-center z-10">
               <div>
                 <h3 className="font-serif text-xl">{galleryProject.title}</h3>
-                <p className="text-amber-200 text-sm">{galleryProject.images.length} designs</p>
+                <p className="text-amber-200 text-sm">{galleryProject.images.length} {galleryProject.category === 'web' ? 'screenshots' : 'designs'}</p>
               </div>
               <button
                 onClick={closeAllModals}
@@ -670,6 +607,18 @@ const Projects = () => {
                 </svg>
               </button>
             </div>
+
+            {/* Disclaimer banner for DPWH gallery */}
+            {galleryProject.category === 'web' && galleryProject.title.includes('DPWH') && (
+              <div className="bg-amber-50 border-b border-amber-200/70 px-6 py-3">
+                <div className="flex items-center gap-2 text-xs text-amber-600">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p>All data shown in these screenshots are mock-ups and for demonstration purposes only. No actual government data is displayed.</p>
+                </div>
+              </div>
+            )}
 
             {/* Gallery Grid */}
             <div className="p-6">
@@ -709,21 +658,21 @@ const Projects = () => {
 
               {/* Gallery Footer */}
               <div className="mt-6 text-center text-sm text-amber-600 border-t border-amber-200/50 pt-4">
-                <p>🎨 All {galleryProject.images.length} designs created with Canva for Boris Cafe (2024)</p>
+                <p>📸 {galleryProject.images.length} {galleryProject.category === 'web' ? 'screenshots' : 'designs'} of {galleryProject.title}</p>
               </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* Project Details Modal - WORKS FOR BOTH WEB AND DESIGN PROJECTS */}
+      {/* Project Details Modal */}
       {activeProject && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={closeAllModals}>
           <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
             {/* Modal header with image */}
             <div className="relative h-64">
               <img
-                src={activeProject.coverImage || activeProject.image}
+                src={activeProject.coverImage}
                 alt={activeProject.title}
                 className="w-full h-full object-cover"
               />
@@ -743,6 +692,16 @@ const Projects = () => {
 
             {/* Modal content */}
             <div className="p-6">
+              {/* Disclaimer for DPWH project */}
+              {activeProject.disclaimer && (
+                <div className="mb-4 p-3 bg-amber-50 rounded-lg border border-amber-200/50 flex items-start gap-2">
+                  <svg className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p className="text-xs text-amber-600">{activeProject.disclaimer}</p>
+                </div>
+              )}
+
               <p className="text-amber-800 mb-4">{activeProject.longDescription}</p>
 
               {/* Tech stack or tools */}
@@ -772,7 +731,7 @@ const Projects = () => {
                 </ul>
               </div>
 
-              {/* Results for design projects */}
+              {/* Results */}
               {activeProject.results && (
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-amber-900 mb-2">Results:</h4>
@@ -786,10 +745,12 @@ const Projects = () => {
                 </div>
               )}
 
-              {/* Image gallery indicator for design projects */}
+              {/* Gallery button for projects with images */}
               {activeProject.images && (
                 <div className="mb-4">
-                  <h4 className="text-sm font-medium text-amber-900 mb-2">Gallery:</h4>
+                  <h4 className="text-sm font-medium text-amber-900 mb-2">
+                    {activeProject.category === 'web' ? 'Screenshots:' : 'Gallery:'}
+                  </h4>
                   <button
                     onClick={() => {
                       setGalleryProject(activeProject);
@@ -800,40 +761,10 @@ const Projects = () => {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                     </svg>
-                    View All {activeProject.images.length} Designs
+                    View All {activeProject.images.length} {activeProject.category === 'web' ? 'Screenshots' : 'Designs'}
                   </button>
                 </div>
               )}
-
-              {/* Action buttons - different for web vs design */}
-              <div className="flex gap-3 mt-6 pt-4 border-t border-amber-200">
-                {activeProject.category === 'web' ? (
-                  <>
-                    <a
-                      href={activeProject.demo}
-                      className="flex-1 text-center bg-amber-800 text-white py-2 rounded-lg hover:bg-amber-900 transition-colors"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={activeProject.github}
-                      className="flex-1 text-center border border-amber-800 text-amber-800 py-2 rounded-lg hover:bg-amber-50 transition-colors"
-                    >
-                      View Code
-                    </a>
-                  </>
-                ) : (
-                  <button
-                    onClick={() => {
-                      setGalleryProject(activeProject);
-                      setActiveProject(null);
-                    }}
-                    className="flex-1 text-center bg-amber-800 text-white py-2 rounded-lg hover:bg-amber-900 transition-colors"
-                  >
-                    View Gallery
-                  </button>
-                )}
-              </div>
             </div>
           </div>
         </div>
